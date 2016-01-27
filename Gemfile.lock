@@ -205,6 +205,3 @@ DEPENDENCIES
   thin
   uuidtools (~> 2.1.1)
   webrat
-
-BUNDLED WITH
-   1.10.6

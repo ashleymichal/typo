@@ -23,7 +23,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   private
 
-  def new_or_edit
+  def new_or_edit # really?!
     @categories = Category.find(:all)
     @category = Category.find(params[:id])
     @category.attributes = params[:category]
