@@ -37,9 +37,7 @@ class Admin::CategoriesController < Admin::BaseController
           return render(:partial => 'admin/content/categories')
         end
       end
-      return
     end
-    render 'new'
   end
 
   def save_category
