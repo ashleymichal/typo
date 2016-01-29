@@ -17,7 +17,7 @@ Feature: Categories
     And I fill in "Name" with "Daily Special"
     And I press "Save"
     Then I should be on the admin categories page
-    And I should see "Daily Special" in the Categories List
+    And I should see "Daily Special" within the Categories table
     
   # Scenario: Editing an existing category
   #   Given I am on the admin categories page

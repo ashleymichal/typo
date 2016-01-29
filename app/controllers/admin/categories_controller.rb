@@ -5,14 +5,13 @@ class Admin::CategoriesController < Admin::BaseController
   def edit; new_or_edit;  end
 
   def new 
-    @categories = Category.all
     @category = Category.new
-    # respond_to do |format|
-    #   format.html { new_or_edit }
-    #   format.js { 
-    #     @category = Category.new
-    #   }
-    # end
+    new_or_edit
+  end
+  
+  def edit
+    @category = Category.find(params[:id])
+    new_or_edit
   end
 
   def destroy
@@ -26,8 +25,7 @@ class Admin::CategoriesController < Admin::BaseController
   private
 
   def new_or_edit # really?!
-    @categories = Category.find(:all)
-    @category = Category.find(params[:id])
+    @categories = Category.all
     @category.attributes = params[:category]
     if request.post?
       respond_to do |format|
