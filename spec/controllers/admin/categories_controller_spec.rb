@@ -33,8 +33,8 @@ describe Admin::CategoriesController do
       get :edit, :id => Factory(:category).id
     end
 
-    it 'should render template new' do
-      assert_template 'new'
+    it 'should render template edit' do
+      assert_template 'edit'
       assert_tag :tag => "table",
         :attributes => { :id => "category_container" }
     end

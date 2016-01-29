@@ -19,8 +19,3 @@ Feature: Categories
     Then I should be on the admin categories page
     And I should see "Daily Special" within the Categories table
     
-  # Scenario: Editing an existing category
-  #   Given I am on the admin categories page
-  #   And I follow the first categories link
-  #   Then I should be on the admin categories page
-  #   And I should see 
