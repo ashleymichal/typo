@@ -5,12 +5,13 @@ class Admin::CategoriesController < Admin::BaseController
   def edit; new_or_edit;  end
 
   def new 
-    respond_to do |format|
-      format.html { new_or_edit }
-      format.js { 
-        @category = Category.new
-      }
-    end
+    @category = Category.new
+    new_or_edit
+  end
+  
+  def edit
+    @category = Category.find(params[:id])
+    new_or_edit
   end
 
   def destroy
@@ -42,9 +43,7 @@ class Admin::CategoriesController < Admin::BaseController
           return render(:partial => 'admin/content/categories')
         end
       end
-      return
     end
-    render 'new'
   end
 
   def save_category
