@@ -15,7 +15,8 @@ module HtmlSelectorsHelpers
 
     when "the page"
       "html > body"
-    when "the Categories table"
+      
+    when "the Categories List"
       "div.right_table"
 
     # Add more mappings here.
