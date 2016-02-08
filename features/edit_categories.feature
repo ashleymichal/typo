@@ -12,6 +12,6 @@ Feature: Categories
   Scenario: Editing an existing category
     Given I fill in "Name" with "Major"
     And I press "Save"
-    Then I should see "Major" within the Categories table
-    But I should not see "General" within the Categories table
+    Then I should see "Major" within the Categories List
+    But I should not see "General" within the Categories List
     
