@@ -5,12 +5,11 @@ class Admin::CategoriesController < Admin::BaseController
   def edit; new_or_edit;  end
 
   def new 
-    @category = Category.new
+    @category = Category.new(:id => nil)
     new_or_edit
   end
   
   def edit
-    @category = Category.find(params[:id])
     new_or_edit
   end
 
